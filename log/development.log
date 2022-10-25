@@ -1997,3 +1997,101 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 12ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 3756)
 
 
+Started GET "/" for ::1 at 2022-10-25 14:57:52 +0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2213)
+Completed 200 OK in 26ms (Views: 4.9ms | ActiveRecord: 8.5ms | Allocations: 6789)
+
+
+Started GET "/" for ::1 at 2022-10-25 15:01:10 +0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:8
+  Rendered users/index.html.erb within layouts/application (Duration: 26.0ms | Allocations: 4653)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 4730)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 2.0ms | Allocations: 7086)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User id: 1, email: "ibrahimnaseer896@gmail.com", created_at: "2022-10-24 13:26:40.442040000 +0000", updated_at: "2022-10-24 13:26:40.442040000 +0000">):
+     8:  <% @users.each do |user| %>
+     9:  <div class="block   w-full  lg:w-1/3">
+    10:   <div class="m-5 p-6 rounded-lg shadow-lg bg-white">
+    11:     <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2"><%= user.name ? user.name : "Unknown"%></h5>
+    12:     <p class="text-gray-700 text-base mb-4">
+    13:       Some quick example text to build on the card title and make up the bulk of the card's
+    14:       content.
+  
+app/views/users/index.html.erb:11
+app/views/users/index.html.erb:8
+Started GET "/" for ::1 at 2022-10-25 15:05:43 +0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:8
+  Rendered users/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 5062)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 5139)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.1ms | Allocations: 7626)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000000cbc0>
+Did you mean?  users_index_path):
+    12:       Some quick example text to build on the card title and make up the bulk of the card's
+    13:       content.
+    14:     </p>
+    15:      <%= link_to  "Show", user_path(user.id), class: " inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"  %>
+    16:   </div>
+    17:   </div>
+    18: <%end%>
+  
+app/views/users/index.html.erb:15
+app/views/users/index.html.erb:8
+Started GET "/" for ::1 at 2022-10-25 15:05:58 +0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:8
+  Rendered users/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 909)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 3590)
+Completed 200 OK in 36ms (Views: 28.9ms | ActiveRecord: 0.9ms | Allocations: 6120)
+
+
+Started GET "/rails/live/reload" for ::1 at 2022-10-25 16:38:32 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/rails/live/reload"):
+  
+Started GET "/" for ::1 at 2022-10-25 16:38:36 +0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 135.9ms | Allocations: 34764)
+Completed 200 OK in 231ms (Views: 138.5ms | ActiveRecord: 11.4ms | Allocations: 61972)
+
+
+Started GET "/sign_up" for ::1 at 2022-10-25 16:55:53 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/sign_up"):
+  
+Started GET "/sign_in" for ::1 at 2022-10-25 16:55:57 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/sign_in"):
+  
+Started GET "/user/login" for ::1 at 2022-10-25 16:56:09 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/user/login"):
+  

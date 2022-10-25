@@ -1,0 +1,38 @@
+<% if user_signed_in? %>
+<nav class="navbar navbar-expand-sm navbar-light bg-primary">
+    <div class="container-fluid">
+        <% if current_page?(root_path) %>
+            <a class="navbar-brand text-white" href="#">Welcome <%= current_user.name %> !</a>
+        <% else %>
+            <%= link_to root_path do %>
+            <a class="navbar-brand text-white" href="#">Budget App</a>
+            <% end %>
+            <p><%= '' %></p>
+        <% end %>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <%= link_to 'Home', root_path, :class=>"nav-link active text-white"%>
+                </li>
+                <li class="nav-item">
+                    <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link text-white'%>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="messages">
+        <% if notice.to_s != '' %>
+            <div class="alert alert-primary" role="alert"><%= notice %></div>
+        <% end %>
+        <% if alert.to_s != '' %>
+            <div class="alert alert-danger" role="alert"><%= alert %></div>
+        <% end %>
+    </div>
+<% end %>
+
+
+       

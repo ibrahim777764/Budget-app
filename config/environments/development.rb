@@ -13,7 +13,6 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
-  
 
   # Enable server timing
   config.server_timing = true
@@ -45,8 +44,6 @@ Rails.application.configure do
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
   # Raise exceptions for disallowed deprecations.
   config.active_support.disallowed_deprecation = :raise
 
@@ -67,6 +64,9 @@ Rails.application.configure do
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
+
+  # Uncomment if you wish to allow Action Cable access from any origin.
+  # config.action_cable.disable_request_forgery_protection = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -77,6 +77,4 @@ Rails.application.configure do
     :port => '2525',
     :authentication => :cram_md5
   }
-  # Uncomment if you wish to allow Action Cable access from any origin.
-  # config.action_cable.disable_request_forgery_protection = true
 end

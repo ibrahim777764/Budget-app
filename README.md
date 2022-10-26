@@ -1,3 +1,5 @@
+## Budget-app
+
 ## Table of Contents
 
 * [About the Project](#budget_app)
@@ -6,7 +8,7 @@
 * [Contributing](#🤝-contributing)
 * [Author](#author)
 
-## Budget App
+# Budget App
 >The best budgeting apps help you understand your income and spending, so you have maximum control over your money.
 
 ## Built With

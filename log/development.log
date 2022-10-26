@@ -4898,3 +4898,77 @@ Processing by GroupsController#show as HTML
 Completed 200 OK in 41ms (Views: 29.1ms | ActiveRecord: 4.3ms | Allocations: 5952)
 
 
+Started GET "/" for ::1 at 2022-10-27 00:59:40 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "groups" WHERE "groups"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/_categories.html.erb:1
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1 ORDER BY "groups"."name" ASC[0m  [["user_id", 1]]
+  ↳ app/views/groups/_categories.html.erb:2
+  [1m[36mExpense Sum (0.9ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expenses_groups" ON "expenses"."id" = "expenses_groups"."expense_id" WHERE "expenses_groups"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/views/groups/_categories.html.erb:13
+  [1m[36mExpense Sum (1.9ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expenses_groups" ON "expenses"."id" = "expenses_groups"."expense_id" WHERE "expenses_groups"."group_id" = $1[0m  [["group_id", 20]]
+  ↳ app/views/groups/_categories.html.erb:13
+  [1m[36mExpense Sum (0.6ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expenses_groups" ON "expenses"."id" = "expenses_groups"."expense_id" WHERE "expenses_groups"."group_id" = $1[0m  [["group_id", 1]]
+  ↳ app/views/groups/_categories.html.erb:13
+  [1m[36mExpense Sum (1.3ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expenses_groups" ON "expenses"."id" = "expenses_groups"."expense_id" WHERE "expenses_groups"."group_id" = $1[0m  [["group_id", 19]]
+  ↳ app/views/groups/_categories.html.erb:13
+  [1m[36mExpense Sum (0.7ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expenses_groups" ON "expenses"."id" = "expenses_groups"."expense_id" WHERE "expenses_groups"."group_id" = $1[0m  [["group_id", 21]]
+  ↳ app/views/groups/_categories.html.erb:13
+  Rendered groups/_categories.html.erb (Duration: 126.7ms | Allocations: 36644)
+  Rendered groups/index.html.erb within layouts/application (Duration: 132.9ms | Allocations: 37365)
+  Rendered navbar/_navbar.html.erb (Duration: 3.5ms | Allocations: 637)
+  Rendered layout layouts/application.html.erb (Duration: 319.5ms | Allocations: 73219)
+Completed 200 OK in 402ms (Views: 313.4ms | ActiveRecord: 20.9ms | Allocations: 95373)
+
+
+Started GET "/groups/2" for ::1 at 2022-10-27 00:59:42 +0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mExpense Sum (1.0ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expenses_groups" ON "expenses"."id" = "expenses_groups"."expense_id" WHERE "expenses_groups"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/models/group.rb:8:in `total_amount'
+  [1m[36mExpense Load (0.9ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" INNER JOIN "expenses_groups" ON "expenses"."id" = "expenses_groups"."expense_id" WHERE "expenses_groups"."group_id" = $1 ORDER BY created_at DESC[0m  [["group_id", 2]]
+  ↳ app/views/expenses/_index.html.erb:2
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 31)
+  Rendered expenses/_index.html.erb (Duration: 5.0ms | Allocations: 853)
+  Rendered groups/show.html.erb within layouts/application (Duration: 11.6ms | Allocations: 2152)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/navbar/_navbar.html.erb:1
+  Rendered navbar/_navbar.html.erb (Duration: 5.1ms | Allocations: 962)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 5738)
+Completed 200 OK in 31ms (Views: 22.5ms | ActiveRecord: 2.9ms | Allocations: 7804)
+
+
+Started GET "/" for ::1 at 2022-10-27 00:59:44 +0500
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "groups" WHERE "groups"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/_categories.html.erb:1
+  [1m[36mGroup Load (1.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1 ORDER BY "groups"."name" ASC[0m  [["user_id", 1]]
+  ↳ app/views/groups/_categories.html.erb:2
+  [1m[36mExpense Sum (0.6ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expenses_groups" ON "expenses"."id" = "expenses_groups"."expense_id" WHERE "expenses_groups"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/views/groups/_categories.html.erb:13
+  [1m[36mExpense Sum (0.4ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expenses_groups" ON "expenses"."id" = "expenses_groups"."expense_id" WHERE "expenses_groups"."group_id" = $1[0m  [["group_id", 20]]
+  ↳ app/views/groups/_categories.html.erb:13
+  [1m[36mExpense Sum (0.4ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expenses_groups" ON "expenses"."id" = "expenses_groups"."expense_id" WHERE "expenses_groups"."group_id" = $1[0m  [["group_id", 1]]
+  ↳ app/views/groups/_categories.html.erb:13
+  [1m[36mExpense Sum (0.4ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expenses_groups" ON "expenses"."id" = "expenses_groups"."expense_id" WHERE "expenses_groups"."group_id" = $1[0m  [["group_id", 19]]
+  ↳ app/views/groups/_categories.html.erb:13
+  [1m[36mExpense Sum (0.4ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expenses_groups" ON "expenses"."id" = "expenses_groups"."expense_id" WHERE "expenses_groups"."group_id" = $1[0m  [["group_id", 21]]
+  ↳ app/views/groups/_categories.html.erb:13
+  Rendered groups/_categories.html.erb (Duration: 32.6ms | Allocations: 7339)
+  Rendered groups/index.html.erb within layouts/application (Duration: 33.2ms | Allocations: 7433)
+  Rendered navbar/_navbar.html.erb (Duration: 0.6ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 40.4ms | Allocations: 9825)
+Completed 200 OK in 43ms (Views: 37.2ms | ActiveRecord: 4.2ms | Allocations: 10307)
+
+

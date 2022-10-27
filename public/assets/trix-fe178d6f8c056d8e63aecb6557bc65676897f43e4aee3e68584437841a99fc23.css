@@ -1,4 +1,3 @@
-
 /*
 Trix 1.3.1
 Copyright © 2020 Basecamp, LLC
@@ -279,7 +278,8 @@ trix-editor [data-trix-mutable] ::selection {
   background: none;
 }
 
-trix-editor [data-trix-mutable].attachment__caption-editor:focus::-moz-selection {
+trix-editor
+  [data-trix-mutable].attachment__caption-editor:focus::-moz-selection {
   background: highlight;
 }
 
@@ -471,8 +471,8 @@ trix-editor .attachment__metadata .attachment__size {
   padding-left: 0.6em;
 }
 
-.trix-content [dir=rtl] blockquote,
-.trix-content blockquote[dir=rtl] {
+.trix-content [dir="rtl"] blockquote,
+.trix-content blockquote[dir="rtl"] {
   border-width: 0;
   border-right-width: 0.3em;
   margin-right: 0.3em;
@@ -483,7 +483,7 @@ trix-editor .attachment__metadata .attachment__size {
   margin-left: 1em;
 }
 
-.trix-content [dir=rtl] li {
+.trix-content [dir="rtl"] li {
   margin-right: 1em;
 }
 
@@ -524,8 +524,11 @@ trix-editor .attachment__metadata .attachment__size {
   text-align: center;
 }
 
-.trix-content .attachment__caption .attachment__name + .attachment__size::before {
-  content: ' · ';
+.trix-content
+  .attachment__caption
+  .attachment__name
+  + .attachment__size::before {
+  content: " · ";
 }
 
 .trix-content .attachment--preview {

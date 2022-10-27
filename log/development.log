@@ -12006,3 +12006,33 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 15ms (Views: 13.1ms | Allocations: 3985)
 
 
+Started GET "/" for 127.0.0.1 at 2022-10-27 20:52:55 +0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 118)
+  Rendered navbar/_navbar.html.erb (Duration: 1.1ms | Allocations: 34)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1601)
+Completed 200 OK in 7ms (Views: 6.0ms | Allocations: 1930)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-27 20:52:58 +0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 118)
+  Rendered navbar/_navbar.html.erb (Duration: 0.1ms | Allocations: 34)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1601)
+Completed 200 OK in 6ms (Views: 4.8ms | Allocations: 1913)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-27 20:53:09 +0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 118)
+  Rendered navbar/_navbar.html.erb (Duration: 0.2ms | Allocations: 34)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 1601)
+Completed 200 OK in 7ms (Views: 6.6ms | Allocations: 1913)
+
+

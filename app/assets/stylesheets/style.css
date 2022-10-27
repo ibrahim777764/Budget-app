@@ -1,18 +1,17 @@
 .container {
-    margin-top: 200px;
-    margin-bottom: 300px;
+  margin-top: 200px;
+  margin-bottom: 300px;
 }
-.row{
-    border: none;
-   padding: 10px 100px 0px 100px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 26px;
-    color: white;
-
+.row {
+  border: none;
+  padding: 10px 100px 0px 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  color: white;
 }
 
 .btn btn-info {
-    background-color: red;
-  }
+  background-color: red;
+}

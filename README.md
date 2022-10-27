@@ -20,7 +20,7 @@
 
 ## Getting Started
 
- [live demo](https://tranquil-sierra-36809.herokuapp.com/)
+ [live demo](https://secure-wave-18374.herokuapp.com/)
 ### Prerequisite
 Go ahead and check the most recent version of each of these:
 - Ruby (ruby --version)

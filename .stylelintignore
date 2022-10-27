@@ -1,0 +1,4 @@
+app/assets/builds/tailwind.css
+"rules": {
+     "selector-type-no-unknown": [true, { "ignoreTypes": ["/^mat-/","/^retrace-/"] }]
+  }

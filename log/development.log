@@ -12036,3 +12036,51 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 7ms (Views: 6.6ms | Allocations: 1913)
 
 
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-10-27 20:58:27 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.8ms | Allocations: 577)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 32.8ms | Allocations: 2075)
+  Rendered navbar/_navbar.html.erb (Duration: 0.3ms | Allocations: 71)
+  Rendered layout layouts/application.html.erb (Duration: 702.2ms | Allocations: 7244)
+Completed 200 OK in 728ms (Views: 708.2ms | Allocations: 8645)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-10-27 20:58:28 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1035)
+  Rendered navbar/_navbar.html.erb (Duration: 0.3ms | Allocations: 53)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 2515)
+Completed 200 OK in 17ms (Views: 14.9ms | Allocations: 3266)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-10-27 20:58:30 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 442ms (ActiveRecord: 19.0ms | Allocations: 5760)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-27 20:58:30 +0500
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "groups" WHERE "groups"."user_id" = $1 LIMIT $2[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/groups/_categories.html.erb:1
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1 ORDER BY "groups"."name" ASC[0m  [["user_id", 6]]
+  ↳ app/views/groups/_categories.html.erb:2
+  [1m[36mExpense Sum (1.5ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expenses_groups" ON "expenses"."id" = "expenses_groups"."expense_id" WHERE "expenses_groups"."group_id" = $1[0m  [["group_id", 24]]
+  ↳ app/views/groups/_categories.html.erb:13
+  Rendered groups/_categories.html.erb (Duration: 49.1ms | Allocations: 3100)
+  Rendered groups/index.html.erb within layouts/application (Duration: 51.9ms | Allocations: 3453)
+  Rendered navbar/_navbar.html.erb (Duration: 0.8ms | Allocations: 177)
+  Rendered layout layouts/application.html.erb (Duration: 56.5ms | Allocations: 5248)
+Completed 200 OK in 72ms (Views: 56.4ms | ActiveRecord: 2.8ms | Allocations: 6369)
+
+

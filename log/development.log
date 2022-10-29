@@ -3882,4 +3882,3 @@ Processing by GroupsController#index as HTML
   Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 3219)
 Completed 200 OK in 21ms (Views: 14.1ms | ActiveRecord: 4.1ms | Allocations: 3766)
 
-

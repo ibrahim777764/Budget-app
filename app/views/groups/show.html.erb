@@ -5,7 +5,7 @@
 		<p class="fw-bold">$<%= @group.total_amount.round(2) %></p>
   </div>
   <div class="p-4 pt-0">
-    <%=image_tag @group.icon, class: 'img-thumbnail ratio ratio-21x9' %>
+    
     <p class="text-muted text-end pt-2"><%= @group.name %></p>
   </div>
 </div>
@@ -16,5 +16,7 @@
 <footer class="footer">
   <div class="d-grid gap-2">
     <%= link_to "Add new transaction", new_expense_path, class: "btn btn-success border-radius-none" %>
+    <%= link_to 'Back', :back ,class: "btn btn-success border-radius-none"%>
+
   </div>
 </footer>

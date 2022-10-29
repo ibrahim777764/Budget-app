@@ -1,13 +1,20 @@
-<div class="background-layout">
 
+<div class="background-layout">
     <div class="container">
-        <div>
-            <h1 class="title text-center display-6 text-muted">Budget App</h1>
+        <div class="text-center">
+            <h1>Budgetprüfer</h1>
         </div>
-    
-        <div class="row gap-3 padding centered">
-            <%= link_to 'Log in', user_session_path, class: 'btn btn-info text-nowrap row'%>
-            <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-success text-nowrap row'%>
-        </div>
-    
+    </div>
+        
+    <div class="row">
+    <%= link_to 'Log in', user_session_path, class: 'btn btn-info text-nowrap row', style: 'background-color:#2596be;color:white' %>
+  
+          
+    </div>
+
+    <div class="row">
+      <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-success text-nowrap row', style: 'background-color:white;color:black' %>
+           
+    </div>
+                   
 </div>

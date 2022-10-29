@@ -20,7 +20,7 @@
 
 ## Getting Started
 
- [live demo](https://secure-wave-18374.herokuapp.com/)
+ [live demo](https://budget-ruby-on-rails.herokuapp.com/)
 
 
   [presentation]( https://www.loom.com/share/19bf2269c10649b1a02084c0f7bb51ac)

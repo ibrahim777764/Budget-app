@@ -113,6 +113,7 @@ GEM
     erubi (1.11.0)
     execjs (2.8.1)
     ffi (1.15.5)
+    ffi (1.15.5-x64-mingw-ucrt)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -149,6 +150,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.8-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.8-x64-mingw-ucrt)
+      racc (~> 1.4)
     nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -156,6 +159,7 @@ GEM
     parser (3.1.2.1)
       ast (~> 2.4.1)
     pg (1.4.4)
+    pg (1.4.4-x64-mingw-ucrt)
     popper_js (2.11.6)
     public_suffix (5.0.0)
     puma (5.6.5)
@@ -285,6 +289,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x64-mingw-ucrt
   x86_64-linux
 
 DEPENDENCIES
@@ -313,7 +318,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.0.1p64
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.2.15

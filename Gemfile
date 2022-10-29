@@ -44,7 +44,6 @@ gem 'bootsnap', require: false
 
 gem 'rspec-core', '~> 3.4', '>= 3.4.4'
 
-
 # Use Sass to process CSS
 gem 'coffee-rails'
 gem 'sassc-rails'
